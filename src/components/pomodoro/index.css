@@ -1,0 +1,81 @@
+body {
+  background-color: rgb(1, 96, 102);
+  color: white;
+  font-family: arial;
+  margin: 0;
+  text-align: center;
+}
+
+button {
+  background-color: inherit;
+  border: none;
+  color: white;
+  font-size: 12px;
+}
+
+h1 {
+  margin-top: 5%;
+}
+
+/* classes */
+.line-through {
+  text-decoration-line: line-through;
+}
+
+.trapezoid {
+  border-bottom: 40px solid rgb(175, 85, 25);
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  height: 0;
+  margin: 15% auto 0 auto;
+  width: 40px;
+}
+
+.box {
+  background-color: rgb(86, 61, 21);
+  border: 20px solid rgb(86, 61, 21);
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.clock-border {
+  background-color: rgb(60, 15, 12);
+  border-radius: 12px;
+  width: 430px;
+}
+
+.unit-wrapper {
+  display: inline-block;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.label {
+  font-size: 12px;
+}
+
+.play-button {
+  width: 40px;
+}
+
+.pad-wrapper {
+  display: inline-block;
+  width: 430px;
+  text-align: left;
+}
+
+.pad {
+  position: relative;
+  top: -2px;
+  background-color: rgb(31, 20, 28);
+  display: inline-block;
+  width: 20px;
+  height: 12px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.right {
+  margin-left: 390px
+}
