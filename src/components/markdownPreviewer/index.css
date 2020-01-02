@@ -1,0 +1,91 @@
+body {
+  box-sizing: border-box;
+  text-align: center;
+  font-family: arial;
+  background-color: rgb(230, 248, 249);
+}
+
+code {
+  background-color: #d3d3d3;
+  border-radius: 4px;
+  padding: 0.2rem;
+}
+
+button {
+  float: right;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.2rem;
+  padding: 0.1rem 0.25rem;
+  border-radius: 100%;
+  border-color: transparent;
+}
+
+.plus {
+  background-color: rgb(28, 157, 93);
+  margin-right: 0.2rem;
+}
+
+.minus {
+  background-color: rgb(251, 208, 65);
+}
+
+.wrapper {
+  background-color: rgb(248, 240, 255);
+  border: 3px solid rgb(177, 232, 237);
+  border-radius: 8px;
+  display: inline-block;
+  margin: 0 auto;
+  width: 40%;
+}
+
+.header {
+  background-color: rgb(177, 232, 237);
+  text-align: left;
+  padding-left: 1%;
+  padding-bottom: 0.1rem;
+  padding-top: 0.05rem;
+}
+
+#editor {
+  background-color: rgb(248, 240, 255);
+  border: none;
+  font-size: 1rem;
+  height: 95%;
+  resize: none;
+  width: 98%;
+}
+
+.ed-margin {
+  margin-bottom: 1rem;
+  transition: margin-bottom 1s;
+}
+
+.ed-margin-hide {
+  margin-bottom: 0.1rem;
+  transition: margin-bottom 1s;
+}
+
+.editor-content {
+  height: 33vh;
+  transition: height 1s;
+}
+
+.preview-content {
+  text-align: left;
+  padding-left: 1rem;
+  height: 45vh;
+  transition: height 1s;
+  overflow: auto;
+}
+
+.hide-content {
+  height: 0;
+  transition: height 1s;
+}
+
+.preview {
+  border-radius: 8px;
+  overflow: auto;
+  width: 99%;
+}

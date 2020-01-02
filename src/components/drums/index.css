@@ -1,0 +1,51 @@
+body {
+  font-family: arial;
+  text-align: center;
+  background-image: url(https://www.sccpre.cat/mypng/full/289-2894365_gene-belcher-transparent-gene-bobs-burgers.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(129, 187, 67);
+}
+
+#drum-machine {
+  background-color: rgb(2, 120, 194);
+  border: 3px solid black;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 28vh;
+  width: 80%;
+}
+
+#display {
+  background-color: rgb(148, 193, 30);
+  border: 3px solid black;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 1rem 0;
+  width: 55vw;
+}
+
+.wrapper {
+  display: inline-block;
+  height: 40vh;
+  width: 70vw;
+}
+
+.drum-pad {
+  background-color: white;
+  border: 3px solid black;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  color: rgb(255, 115, 95);
+  display: inline-block;
+  height: 70%;
+  margin-left: 0.1%;
+  margin-right: 0.1%;
+  padding-top: 1rem;
+  width: 8%;
+}
+
+.pressed {
+  color: black;
+  background-color: rgb(252, 225, 48);
+}

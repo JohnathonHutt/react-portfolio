@@ -1,0 +1,56 @@
+body {
+  background-color: grey;
+  color: white;
+  font-family: arial;
+  text-align: center;
+}
+
+.wrapper {
+  background-color: black;
+  border-radius: 8px;
+  margin: 50px auto 0 auto;
+  width: 300px;
+}
+
+.display-wrapper {
+  padding-top: 25px;
+  width: 260px;
+}
+
+.display {
+  font-size: 3.5rem;
+  text-align: right;
+  overflow: auto;
+}
+
+.buttons-wrapper {
+  display: inline-block;
+  width: 260px;
+  margin: 10px auto 10px auto;
+}
+
+.button {
+  background-color: rgb(51, 51, 51);
+  border: 0;
+  border-radius: 100px;
+  color: white;
+  display: inline-block;
+  font-size: 1.5rem;
+  height: 55px;
+  width: 55px;
+  margin: 5px 5px;
+}
+
+.operator {
+  background-color: rgb(255, 159, 10);
+}
+
+.main {
+  background-color: rgb(166, 166, 166);
+  color: black;
+}
+
+.zero {
+  border-radius: 100px;
+  width: 120px;
+}

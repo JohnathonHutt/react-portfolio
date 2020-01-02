@@ -1,0 +1,49 @@
+body {
+  background-color: #eef5b2;
+  color: white;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#quote-box {
+  margin: 1.5rem auto;
+  background-color: #3fc5f0;
+  width: 40%;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.quote-and-author {
+  height: 10rem;
+}
+
+.btn {
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+}
+
+.quote-button {
+  border: 2px solid white;
+  background-color: #3fc5f0;
+  color: white;
+  margin: 0 0.25rem;
+}
+
+.quote-button:hover {
+  background-color: #42dee1;
+  color: white;
+}
+
+.tweet {
+  background-color: #00acee;
+  border: 2px solid #00acee;
+  color: white;
+  text-decoration: none;
+  margin: 0 0.25rem;
+}
+
+.tweet:hover {
+  color: white;
+  border-color: white;
+}
