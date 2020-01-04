@@ -10,11 +10,13 @@ import {
 
 import './App.css';
 
+import Home from './components/home';
 import Pom from './components/pomodoro';
 import Quotes from './components/quotes';
-// import Drums from './components/drums';
+import Drums from './components/drums';
 import Calculator from './components/calculator';
 import ToDoList from './components/todo';
+
 // import MarkdownPreviewer from './components/markdownPreviewer';
 
 // <Pom />
@@ -23,12 +25,28 @@ import ToDoList from './components/todo';
 
 function App() {
   return (
-    <div>
-      <h1>React Projects</h1>
-      <p>A paragraph</p>
-      <ToDoList />
-      <Calculator />
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/drums">
+          <Drums />
+        </Route>
+        <Route path="/pomodoro">
+          <Pom />
+        </Route>
+        <Route path="/quotes">
+          <Quotes />
+        </Route>
+        <Route path="/calculator">
+          <Calculator />
+        </Route>
+        <Route path="/todo">
+          <ToDoList />
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 
