@@ -3,6 +3,8 @@
 import React from 'react';
 import './index.css';
 
+const marked = require("marked");
+
 //issues with marked library
 //also might have issues with global variables - not encapsulated in export...
 
@@ -58,10 +60,12 @@ class MarkdownPreviewer extends React.Component {
 
   render() {
       return (
-          <div>
-            <Editor shrinkEditor={this.shrinkEditor} editorSize={this.state.editorSize} previewSize={this.state.previewSize} value={this.state.value} handleChange={this.handleChange} enlargeEditor={this.enlargeEditor} />
-            <br/>
-            <Preview shrinkPreview={this.shrinkPreview} enlargePreview={this.enlargePreview} previewSize={this.state.previewSize} markup={this.state.markup} />
+          <div className="m-body">
+            <div className="m-outer-wrapper">
+              <Editor shrinkEditor={this.shrinkEditor} editorSize={this.state.editorSize} previewSize={this.state.previewSize} value={this.state.value} handleChange={this.handleChange} enlargeEditor={this.enlargeEditor} />
+              <br/>
+              <Preview shrinkPreview={this.shrinkPreview} enlargePreview={this.enlargePreview} previewSize={this.state.previewSize} markup={this.state.markup} />
+            </div>
           </div>
       );
     }
@@ -71,14 +75,14 @@ class MarkdownPreviewer extends React.Component {
 function Editor(props) {
   if (props.editorSize === "standard") {
     return (
-      <div className={"wrapper " + ((props.previewSize === "standard") ? "ed-margin" : "ed-margin-hide")}>
-        <div className="header">
+      <div className={"m-wrapper " + ((props.previewSize === "standard") ? "m-ed-margin" : "m-ed-margin-hide")}>
+        <div className="m-header">
           Editor
-          <button className="btn plus" onClick={props.enlargeEditor}></button>
-          <button className="btn minus" onClick={props.shrinkEditor}></button>
+          <button className="m-button m-btn m-plus" onClick={props.enlargeEditor}></button>
+          <button className="m-button m-btn m-minus" onClick={props.shrinkEditor}></button>
         </div>
-        <div class="editor-content">
-          <textarea id="editor" value={props.value} onChange={props.handleChange}></textarea>
+        <div className="m-editor-content">
+          <textarea id="editor" className="m-editor" value={props.value} onChange={props.handleChange}></textarea>
         </div>
       </div>
     );
@@ -86,13 +90,13 @@ function Editor(props) {
 
   if (props.editorSize === "hidden") {
     return (
-      <div className="wrapper ed-margin-hide">
-        <div className="header">
+      <div className="m-wrapper m-ed-margin-hide">
+        <div className="m-header">
           Editor
-          <button className="btn plus" onClick={props.enlargeEditor}></button>
-          <button className="btn minus" onClick={props.shrinkEditor}></button>
+          <button className="m-button m-btn m-plus" onClick={props.enlargeEditor}></button>
+          <button className="m-button m-btn m-minus" onClick={props.shrinkEditor}></button>
         </div>
-        <div class="hide-content">
+        <div className="m-hide-content">
         </div>
       </div>
     );
@@ -103,14 +107,14 @@ function Editor(props) {
 function Preview(props) {
   if (props.previewSize === "standard") {
     return (
-          <div className="wrapper">
-            <div className="header">
+          <div className="m-wrapper">
+            <div className="m-header">
               Preview
-              <button className="btn plus" onClick={props.enlargePreview}></button>
-              <button className="btn minus" onClick={props.shrinkPreview}></button>
+              <button className="m-button m-btn m-plus" onClick={props.enlargePreview}></button>
+              <button className="m-button m-btn m-minus" onClick={props.shrinkPreview}></button>
             </div>
-            <div className="preview-content">
-              <div id="preview" className="preview" dangerouslySetInnerHTML={props.markup}>
+            <div className="m-preview-content">
+              <div id="preview" className="m-preview" dangerouslySetInnerHTML={props.markup}>
               </div>
             </div>
           </div>
@@ -118,13 +122,13 @@ function Preview(props) {
     }
     if (props.previewSize === "hidden") {
       return (
-        <div className="wrapper">
-            <div className="header">
+        <div className="m-wrapper">
+            <div className="m-header">
               Preview
-              <button className="btn plus" onClick={props.enlargePreview}></button>
-              <button className="btn minus" onClick={props.shrinkPreview}></button>
+              <button className="m-button m-btn m-plus" onClick={props.enlargePreview}></button>
+              <button className="m-button m-btn m-minus" onClick={props.shrinkPreview}></button>
             </div>
-            <div className="hide-content">
+            <div className="m-hide-content">
             </div>
         </div>
       );

@@ -1,10 +1,15 @@
-body {
+.d-body {
   font-family: arial;
   text-align: center;
-  background-image: url(https://www.sccpre.cat/mypng/full/289-2894365_gene-belcher-transparent-gene-bobs-burgers.png);
+  background-image: url(https://vignette.wikia.nocookie.net/bobs-burgers-fanon/images/7/7a/Gene_belcher_render.png/revision/latest?cb=20170920184921);
   background-repeat: no-repeat;
   background-position: center;
   background-color: rgb(129, 187, 67);
+
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 #drum-machine {
@@ -12,26 +17,27 @@ body {
   border: 3px solid black;
   border-radius: 8px;
   display: inline-block;
-  margin-top: 28vh;
+  margin-top: 45vh;
   width: 80%;
 }
 
-#display {
+.d-display {
   background-color: rgb(148, 193, 30);
   border: 3px solid black;
   border-radius: 8px;
   display: inline-block;
   padding: 1rem 0;
   width: 55vw;
+  margin: 0.5rem 0;
 }
 
-.wrapper {
+.d-wrapper {
   display: inline-block;
-  height: 40vh;
+  height: 38vh;
   width: 70vw;
 }
 
-.drum-pad {
+.d-drum-pad {
   background-color: white;
   border: 3px solid black;
   border-bottom-right-radius: 8px;
@@ -45,7 +51,7 @@ body {
   width: 8%;
 }
 
-.pressed {
+.d-pressed {
   color: black;
   background-color: rgb(252, 225, 48);
 }

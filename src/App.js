@@ -1,11 +1,12 @@
 //jshint esversion:6
 
+//Does not use code splitting
+
 import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import './App.css';
@@ -17,7 +18,7 @@ import Drums from './components/drums';
 import Calculator from './components/calculator';
 import ToDoList from './components/todo';
 
-// import MarkdownPreviewer from './components/markdownPreviewer';
+import MarkdownPreviewer from './components/markdownPreviewer';
 
 // <Pom />
 // <Quotes />
@@ -44,6 +45,9 @@ function App() {
         </Route>
         <Route path="/todo">
           <ToDoList />
+        </Route>
+        <Route path="/markdownPreviewer">
+          <MarkdownPreviewer />
         </Route>
       </Switch>
     </Router>

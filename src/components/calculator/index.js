@@ -282,9 +282,11 @@ class Calculator extends React.Component {
 
   render() {
     return (
-      <div className="wrapper">
-        <Display displayText={this.state.displayText}/>
-        <Buttons handleClick={this.handleClick} />
+      <div className="c-body">
+        <div className="c-wrapper">
+          <Display displayText={this.state.displayText}/>
+          <Buttons handleClick={this.handleClick} />
+        </div>
       </div>
     );
   }
@@ -292,17 +294,17 @@ class Calculator extends React.Component {
 
 function Display(props) {
   return (
-    <div className="display-wrapper">
-      <div id="display" className="display">{props.displayText}</div>
+    <div className="c-display-wrapper">
+      <div id="display" className="c-display">{props.displayText}</div>
     </div>
   );
 }
 
 function Buttons(props) {
   return (
-    <div className="buttons-wrapper">
+    <div className="c-buttons-wrapper">
       {buttonData.map((btn, index) => (
-        <button className={"button " + btn.type} id={btn.id} key={index} onClick={props.handleClick}>{btn.text}</button>
+        <button className={"c-button c-" + btn.type} id={btn.id} key={index} onClick={props.handleClick}>{btn.text}</button>
       ))}
     </div>
   );

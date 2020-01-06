@@ -31,6 +31,7 @@
 
 .btn {
   font-size: 1rem;
+  width: 1.3rem;
   border-radius: 25px;
   background-color: rgb(232, 110, 208);
   color: white;
@@ -43,7 +44,7 @@
   width: 12rem;
   font-size: 1rem;
   margin-bottom: 1rem;
-  padding: 0.4rem 0;
+  padding: 0.4rem 0 0.4rem 0.5rem;
 }
 
 .add-btn {
@@ -73,6 +74,6 @@
   border-color: rgb(232, 110, 208);
 }
 
-ul li:nth-child(odd) {
+.list li:nth-child(odd) {
   background: rgb(177, 232, 237);
 }

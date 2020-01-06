@@ -40,16 +40,20 @@ class Quotes extends React.Component {
     let encodeAuthor = encodeURI(this.state.author);
     let href = "https://twitter.com/intent/tweet?text=" + encodeQuote + " -" + encodeAuthor;
     return (
-      <div id="quote-box">
-        <h1>Quotes</h1>
-        <div className="quote-and-author">
-          <p id="text">{this.state.quote}</p>
-          <p id="author"> - {this.state.author}</p>
+      <div className="q-body">
+        <div id="quote-box">
+          <h1>Quotes</h1>
+          <br />
+          <div className="q-quote-and-author">
+            <p id="text">{this.state.quote}</p>
+            <br />
+            <p id="author"> - {this.state.author}</p>
+          </div>
+          <button id="new-quote" className="q-btn q-quote-button" onClick={this.updateQuote}>Quote</button>
+          <a className="q-btn q-tweet" href={href} data-size="large">
+            Tweet
+          </a>
         </div>
-        <button id="new-quote" className="btn quote-button" onClick={this.updateQuote}>Quote</button>
-        <a className="btn tweet" href={href} data-size="large">
-          Tweet
-        </a>
       </div>
     );
   }

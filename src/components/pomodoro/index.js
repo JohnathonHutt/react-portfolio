@@ -165,21 +165,21 @@ class Pom extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Farnsworth's <span className="line-through">Death</span> Pomodoro Clock</h1>
+      <div className="p-body">
+        <h1 className="p-title">Farnsworth's <span className="p-line-through">Death</span> Pomodoro Clock</h1>
         <h2>"It can do other things"</h2>
-        <div className="trapezoid"></div>
-        <div className="box">
-          <div className="clock-border">
+        <div className="p-trapezoid"></div>
+        <div className="p-box">
+          <div className="p-clock-border">
             <Break breakLength={this.state.breakLength} handleClick={this.handleClick} />
             <Session sessionLength={this.state.sessionLength} handleClick={this.handleClick} />
             <Timer currType={this.state.currType} timer={this.state.timer} isSessionInitialized={this.state.isSessionInitialized} currLength={this.state.currLength} handleClick={this.handleClick} />
           </div>
         </div>
         <div>
-          <div className="pad-wrapper">
-            <div className="pad"></div>
-            <div className="pad right"></div>
+          <div className="p-pad-wrapper">
+            <div className="p-pad"></div>
+            <div className="p-pad p-right"></div>
           </div>
         </div>
       </div>
@@ -189,12 +189,12 @@ class Pom extends React.Component {
 
 function Break(props) {
   return (
-    <div className="unit-wrapper">
-      <p id="break-label" className="label">Break Length</p>
-      <div id="break-length" className="display">{props.breakLength}</div>
+    <div className="p-unit-wrapper">
+      <p id="break-label" className="p-label">Break Length</p>
+      <div id="break-length" className="p-display">{props.breakLength}</div>
       <div>
-        <button id="break-increment" onClick={props.handleClick}>+</button>
-        <button id="break-decrement" onClick={props.handleClick}>-</button>
+        <button id="break-increment" className="p-button" onClick={props.handleClick}>+</button>
+        <button id="break-decrement" className="p-button" onClick={props.handleClick}>-</button>
       </div>
     </div>
   )
@@ -202,12 +202,12 @@ function Break(props) {
 
 function Session(props) {
   return (
-    <div className="unit-wrapper">
-      <p id="session-label" className="label">Session Length</p>
-      <div id="session-length" className="display">{props.sessionLength}</div>
+    <div className="p-unit-wrapper">
+      <p id="session-label" className="p-label">Session Length</p>
+      <div id="session-length" className="p-display">{props.sessionLength}</div>
       <div>
-        <button id="session-increment" onClick={props.handleClick}>+</button>
-        <button id="session-decrement" onClick={props.handleClick}>-</button>
+        <button id="session-increment" className="p-button" onClick={props.handleClick}>+</button>
+        <button id="session-decrement" className="p-button" onClick={props.handleClick}>-</button>
       </div>
     </div>
   )
@@ -215,12 +215,12 @@ function Session(props) {
 
 function Timer(props) {
   return (
-    <div className="unit-wrapper">
-      <p id="timer-label" className="label">{(props.currType === "session") ? "Session" : "Break"}</p>
-      <div id="time-left" className="display">{props.currLength}</div>
+    <div className="p-unit-wrapper">
+      <p id="timer-label" className="p-label">{(props.currType === "session") ? "Session" : "Break"}</p>
+      <div id="time-left" className="p-display">{props.currLength}</div>
       <div>
-        <button id="start_stop" className="play-button" onClick={props.handleClick}>{(!props.timer) ? "start" : "pause"}</button>
-        <button id="reset" onClick={props.handleClick}>reset</button>
+        <button id="start_stop" className="p-button p-play-button" onClick={props.handleClick}>{(!props.timer) ? "start" : "pause"}</button>
+        <button id="reset" className="p-button p-play-button" onClick={props.handleClick}>reset</button>
         <audio id="beep" src="https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3" type="audio/mp3"></audio>
       </div>
     </div>

@@ -52,9 +52,9 @@ class Drums extends React.Component {
 
   pressedHelper(letter) {
     //add and remove pressed class
-    document.getElementById("drum-pad-" + letter).classList.add("pressed");
+    document.getElementById("drum-pad-" + letter).classList.add("d-pressed");
     setTimeout(() => {
-      document.getElementById("drum-pad-" + letter).classList.remove("pressed");
+      document.getElementById("drum-pad-" + letter).classList.remove("d-pressed");
     }, 200);
   }
 
@@ -76,10 +76,9 @@ class Drums extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="d-body">
         <div id="drum-machine">
-          <h2 id="display">{this.state.displayText}</h2>
-          <br/>
+          <h2 id="display" className="d-display">{this.state.displayText}</h2>
           <DrumPads handleClick={this.handleClick} />
         </div>
       </div>
@@ -89,11 +88,11 @@ class Drums extends React.Component {
 
 function DrumPads(props) {
   return (
-    <div className="wrapper">
+    <div className="d-wrapper">
       {audioData.map((i) => (
-        <div id={"drum-pad-" + i.letter} key={i.letter} className="drum-pad" onClick={() => props.handleClick(i.letter)}>
+        <div id={"drum-pad-" + i.letter} key={i.letter} className="d-drum-pad" onClick={() => props.handleClick(i.letter)}>
           {i.letter}
-          <audio id={i.letter}  className="clip">
+          <audio id={i.letter}  className="d-clip">
             <source src={i.src} type={i.type}/>
           </audio>
         </div>

@@ -1,28 +1,26 @@
-body {
+.p-body {
   background-color: rgb(1, 96, 102);
   color: white;
   font-family: arial;
   margin: 0;
   text-align: center;
+
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
-button {
-  background-color: inherit;
-  border: none;
-  color: white;
-  font-size: 12px;
-}
-
-h1 {
+.p-title {
   margin-top: 5%;
 }
 
 /* classes */
-.line-through {
+.p-line-through {
   text-decoration-line: line-through;
 }
 
-.trapezoid {
+.p-trapezoid {
   border-bottom: 40px solid rgb(175, 85, 25);
   border-left: 25px solid transparent;
   border-right: 25px solid transparent;
@@ -31,7 +29,7 @@ h1 {
   width: 40px;
 }
 
-.box {
+.p-box {
   background-color: rgb(86, 61, 21);
   border: 20px solid rgb(86, 61, 21);
   border-radius: 6px;
@@ -39,33 +37,52 @@ h1 {
   margin-bottom: 0;
 }
 
-.clock-border {
+.p-clock-border {
   background-color: rgb(60, 15, 12);
   border-radius: 12px;
   width: 430px;
 }
 
-.unit-wrapper {
+.p-unit-wrapper {
   display: inline-block;
   padding: 1rem 2rem;
   text-align: center;
 }
 
-.label {
+.p-label {
+  font-size: 0.75rem;
+}
+
+.p-display {
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+.p-button {
+  background-color: inherit;
+  border: none;
+  color: white;
   font-size: 12px;
+  width: 1rem;
 }
 
-.play-button {
-  width: 40px;
+.p-button:hover {
+  background-color: white;
+  border-radius: 8px;
+  color: black;
 }
 
-.pad-wrapper {
+.p-play-button {
+  width: 2.5rem;
+}
+
+.p-pad-wrapper {
   display: inline-block;
   width: 430px;
   text-align: left;
 }
 
-.pad {
+.p-pad {
   position: relative;
   top: -2px;
   background-color: rgb(31, 20, 28);
@@ -76,6 +93,6 @@ h1 {
   border-bottom-right-radius: 3px;
 }
 
-.right {
+.p-right {
   margin-left: 390px
 }
