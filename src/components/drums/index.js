@@ -4,7 +4,7 @@ import React from 'react';
 import './index.css';
 
 const audioData = [
-  {display: "Dog", letter: "Q", type: "audio/wav", src: "bark.wav"},
+  {display: "Dog", letter: "Q", type: "audio/wav", src: "assets/bark.wav"},
   {display: "F Minor", letter: "W", type: "audio/wav", src: "https://www.pacdv.com/sounds/fart-sounds/fart-2.wav"},
   {display: "F Major", letter: "E", type: "audio/mp3", src: "https://www.pacdv.com/sounds/fart-sounds/fart-7.mp3"},
   {display: "Clap", letter: "A", type: "audio/mp3", src: "https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"},

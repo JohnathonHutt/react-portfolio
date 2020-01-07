@@ -9,12 +9,8 @@ li {
 
 .h-about-wrapper {
   margin: 0 auto;
-  width: 40vw;
+  width: 90vw;
   text-align: left;
-}
-
-.h-sub-title {
-
 }
 
 .h-desc {
@@ -23,17 +19,40 @@ li {
   text-align: justify;
 }
 
-#route-links > li {
-  line-height: 1.5;
-  background-color: inherit;
-  list-style: none;
+.h-link-wrapper {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .h-link {
-  /* color: white; */
   text-decoration: none;
+  color: white;
+}
+
+.h-project-tile {
+  border-radius: 20px;
 }
 
 .h-link:hover {
   color: blue;
+}
+
+.h-projectTitle {
+  background-color: #0292B7;
+  width: 100%;
+  max-width: 600px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.h-image {
+  max-width: 600px;
+  max-height: 300px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin-bottom: 0;
 }
