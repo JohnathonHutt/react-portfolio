@@ -15,7 +15,6 @@
   margin-top: 5%;
 }
 
-/* classes */
 .p-line-through {
   text-decoration-line: line-through;
 }
@@ -54,25 +53,27 @@
 }
 
 .p-display {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 0.5rem 0;
 }
 
 .p-button {
+  padding: 0;
   background-color: inherit;
   border: none;
   color: white;
-  font-size: 12px;
+  font-size: 1rem;
   width: 1rem;
 }
 
 .p-button:hover {
   background-color: white;
-  border-radius: 8px;
+  border-radius: 2px;
   color: black;
 }
 
 .p-play-button {
+  font-size: 0.75rem;
   width: 2.5rem;
 }
 

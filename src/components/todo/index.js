@@ -73,20 +73,24 @@ class ToDoList extends React.Component {
   render() {
     if (this.state.showList) {
       return (
-        <div className="to-do-list">
-          <div className="header">
-            <h2 className="title" onClick={this.showOrHideList}>To Do List</h2>
-            <CreateNew value={this.state.term} onChange={this.onChange} onSubmit={this.onSubmit}/>
+        <div className="t-body">
+          <div className="to-do-list">
+            <div className="header">
+              <h2 className="title" onClick={this.showOrHideList}>To Do List</h2>
+              <CreateNew value={this.state.term} onChange={this.onChange} onSubmit={this.onSubmit}/>
+            </div>
+            <ListItems handleClick={this.handleClick} items={this.state.items} crossOrUncrossItem={this.crossOrUncrossItem} onDelete={this.deleteItem}/>
           </div>
-          <ListItems handleClick={this.handleClick} items={this.state.items} crossOrUncrossItem={this.crossOrUncrossItem} onDelete={this.deleteItem}/>
         </div>
       );
     }
     return (
-      <div className="to-do-list hidden">
-        <div className="header" onClick={this.showOrHideList}>
-        <h2 className="title">To Do List</h2>
-        <CreateNew value={this.state.term} onChange={this.onChange} onSubmit={this.onSubmit}/>
+      <div className="t-body">
+        <div className="to-do-list hidden">
+          <div className="header" onClick={this.showOrHideList}>
+          <h2 className="title">To Do List</h2>
+          <CreateNew value={this.state.term} onChange={this.onChange} onSubmit={this.onSubmit}/>
+          </div>
         </div>
       </div>
     );

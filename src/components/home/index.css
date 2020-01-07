@@ -1,11 +1,39 @@
+/*
+li {
+  list-style-type: none;
+} */
+
 .h-title {
   margin: 1.5rem auto;
 }
 
-.h-desc {
-  margin: 1.5rem auto;
+.h-about-wrapper {
+  margin: 0 auto;
+  width: 40vw;
+  text-align: left;
 }
 
-.h-links {
+.h-sub-title {
+
+}
+
+.h-desc {
+  display: inline-block;
+  margin: 0.5rem auto 1.5rem auto;
+  text-align: justify;
+}
+
+#route-links > li {
   line-height: 1.5;
+  background-color: inherit;
+  list-style: none;
+}
+
+.h-link {
+  /* color: white; */
+  text-decoration: none;
+}
+
+.h-link:hover {
+  color: blue;
 }
