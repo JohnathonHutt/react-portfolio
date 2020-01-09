@@ -12,7 +12,7 @@ function Home(props) {
       <h1 className="h-title">React Portfolio</h1>
       <div className="h-about-wrapper">
         <h2>About</h2>
-        <p className="h-desc">This site is a collection the projects I built for the freeCodeCamp front end libraries certificate. Each of the projects were built with React and combined using create-react-app, React Router - the site was deployed with a Node/express backend. I also threw in a to-do list for good measure :).</p>
+        <p className="h-desc">This site is a collection of the projects I built for the freeCodeCamp front end libraries certificate. Each projects was built with React - then all of the projects were combined using create-react-app/React Router (with some code splitting) and the site was deployed with a Node/express backend. I also threw in a to-do list for good measure :).</p>
       </div>
       <RouteLinks />
     </div>
@@ -24,7 +24,7 @@ class RouteLinks extends React.Component {
     super(props);
     this.state = {
       linkData: [
-        {title: "Calculator: Apple Flavored", to: "/calculator", img: "assets/calc.png"},
+        {title: "Apple Flavored Calculator", to: "/calculator", img: "assets/calc.png"},
         {title: "Farnsworth's Pomodoro Clock", to: "/pomodoro", img: "assets/pom.png"},
         {title: "Gene's Keyboard", to: "/drums", img: "assets/drum.png"},
         {title: "Markdown Previewer", to: "/markdownPreviewer", img: "assets/markdown.png"},
@@ -39,8 +39,8 @@ class RouteLinks extends React.Component {
         {this.state.linkData.map((i) => (
           <Link className="h-link" to={i.to} key={i}>
             <div className="h-project-tile">
-              <h3 className="h-projectTitle">{i.title}</h3>
               <img className="h-image" src={i.img} alt="A calculator" />
+              <h3 className="h-projectTitle">{i.title}</h3>
             </div>
           </Link>
         ))}
@@ -50,13 +50,3 @@ class RouteLinks extends React.Component {
 }
 
 export default Home;
-
-
-// <ul id="route-links">
-//   <li><Link className="h-link" to="/calculator">Calculator!</Link></li>
-//   <li><Link className="h-link" to="/markdownPreviewer">Markodown Previewer!</Link></li>
-//   <li><Link className="h-link" to="/pomodoro">Pomodoro!</Link></li>
-//   <li><Link className="h-link" to="/todo">A to-do list!</Link></li>
-//   <li><Link className="h-link" to="/drums">Drums!</Link></li>
-//   <li><Link className="h-link" to="/quotes">Quotes!</Link></li>
-// </ul>

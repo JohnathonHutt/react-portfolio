@@ -1,19 +1,18 @@
-/*
-li {
-  list-style-type: none;
-} */
 
 .h-title {
+  font-size: 2rem;
   margin: 1.5rem auto;
 }
 
 .h-about-wrapper {
-  margin: 0 auto;
+  margin: 3rem auto;
   width: 90vw;
   text-align: left;
+  max-width: 600px;
 }
 
 .h-desc {
+  font-family: arial;
   display: inline-block;
   margin: 0.5rem auto 1.5rem auto;
   text-align: justify;
@@ -21,38 +20,52 @@ li {
 
 .h-link-wrapper {
   display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
+  margin-bottom: 1rem;
 }
 
 .h-link {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .h-project-tile {
   border-radius: 20px;
+  background-color: rgb(232, 236, 247);
+  border: 1px solid transparent;
+  box-shadow: 0 7px 8px rgb(15, 116, 127);
+  margin: 1rem 0;
 }
 
-.h-link:hover {
-  color: blue;
+.h-project-tile:hover {
+  box-shadow: 0 10px 15px rgb(15, 116, 127);
 }
 
 .h-projectTitle {
-  background-color: #0292B7;
+  background-color: inherit;
   width: 100%;
   max-width: 600px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  margin-bottom: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  margin: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 .h-image {
   max-width: 600px;
+  width: 100%;
   max-height: 300px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  margin-bottom: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0;
+}
+
+@media (max-width: 650px) {
+  .h-link-wrapper {
+    width: 95%;
+  }
+  .h-about-wrapper {
+    margin: 0.5rem auto 0 auto;
+  }
 }
