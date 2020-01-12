@@ -1,3 +1,5 @@
+/* Note - could refactor - place display and keys in a flex container - set display to 100% and use space between for key spacing */
+
 .d-body {
   font-family: arial;
   text-align: center;
@@ -18,7 +20,8 @@
   border-radius: 8px;
   display: inline-block;
   margin-top: 45vh;
-  width: 80%;
+  max-width: 750px;
+  width: 98%;
 }
 
 .d-display {
@@ -28,13 +31,14 @@
   display: inline-block;
   padding: 1rem 0;
   width: 55vw;
+  width: 77%;
   margin: 0.5rem 0;
 }
 
 .d-wrapper {
   display: inline-block;
   height: 38vh;
-  width: 70vw;
+  width: 95%;
 }
 
 .d-drum-pad {
