@@ -14,7 +14,7 @@ class Quotes extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://quotes.stormconsultancy.co.uk/random.json')
+    fetch('https://quotes.stormconsultancy.co.uk/random.json')
       .then(response => response.json())
       .then(data => {
       this.setState({
@@ -25,7 +25,7 @@ class Quotes extends React.Component {
   }
 
   updateQuote() {
-    fetch('http://quotes.stormconsultancy.co.uk/random.json')
+    fetch('https://quotes.stormconsultancy.co.uk/random.json')
       .then(response => response.json())
       .then(data => {
       this.setState({
