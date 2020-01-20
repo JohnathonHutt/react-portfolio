@@ -14,7 +14,7 @@ class Quotes extends React.Component {
   }
 
   componentDidMount() {
-    fetch('https://jhuttreactportfolio.herokuapp.com/futurama-quotes')
+    fetch('https://fururamaquoteapi.herokuapp.com/futurama')
       .then(response => response.json())
       .then(data => {
       this.setState({
@@ -25,7 +25,7 @@ class Quotes extends React.Component {
   }
 
   updateQuote() {
-    fetch('https://jhuttreactportfolio.herokuapp.com/futurama-quotes')
+    fetch('https://fururamaquoteapi.herokuapp.com/futurama')
       .then(response => response.json())
       .then(data => {
       this.setState({

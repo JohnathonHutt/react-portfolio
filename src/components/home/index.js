@@ -37,7 +37,7 @@ class RouteLinks extends React.Component {
     return (
       <div className="h-link-wrapper">
         {this.state.linkData.map((i) => (
-          <Link className="h-link" to={i.to} key={i}>
+          <Link className="h-link" to={i.to} key={"home" + i}>
             <div className="h-project-tile">
               <img className="h-image" src={i.img} alt="A calculator" />
               <h3 className="h-projectTitle">{i.title}</h3>
