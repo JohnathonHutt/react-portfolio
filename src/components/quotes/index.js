@@ -8,28 +8,28 @@ class Quotes extends React.Component {
     super(props);
     this.state = {
       quote: "",
-      author: ""
+      name: ""
     };
     this.updateQuote = this.updateQuote.bind(this);
   }
 
   componentDidMount() {
-    fetch('https://quotes.stormconsultancy.co.uk/random.json')
+    fetch('https://jhuttreactportfolio.herokuapp.com/futurama-quotes')
       .then(response => response.json())
       .then(data => {
       this.setState({
-        author: data.author,
+        name: data.name,
         quote: data.quote
       });
     });
   }
 
   updateQuote() {
-    fetch('https://quotes.stormconsultancy.co.uk/random.json')
+    fetch('https://jhuttreactportfolio.herokuapp.com/futurama-quotes')
       .then(response => response.json())
       .then(data => {
       this.setState({
-        author: data.author,
+        name: data.name,
         quote: data.quote,
       });
     });
@@ -37,7 +37,7 @@ class Quotes extends React.Component {
 
   render() {
     let encodeQuote = encodeURI(this.state.quote);
-    let encodeAuthor = encodeURI(this.state.author);
+    let encodeAuthor = encodeURI(this.state.name);
     let href = "https://twitter.com/intent/tweet?text=" + encodeQuote + " -" + encodeAuthor;
     return (
       <div className="q-body">
@@ -47,7 +47,7 @@ class Quotes extends React.Component {
           <div className="q-quote-and-author">
             <p id="text">{this.state.quote}</p>
             <br />
-            <p id="author"> - {this.state.author}</p>
+            <p id="author"> - {this.state.name}</p>
           </div>
           <button id="new-quote" className="q-btn q-quote-button" onClick={this.updateQuote}>Quote</button>
           <a className="q-btn q-tweet" href={href} data-size="large">
