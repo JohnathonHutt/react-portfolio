@@ -4,7 +4,7 @@ The site is a collection of the projects I built for the freeCodeCamp front end 
 
 View the heroku deployment at https://jhuttreactportfolio.herokuapp.com
 
-The random quote generator in this project fetches from a custom quote API deployed at https://fururamaquoteapi.herokuapp.com
+The random quote generator in this project fetches from a custom quote API deployed at https://futuramaquoteapi.herokuapp.com
 The repository for the API is https://github.com/JohnathonHutt/futurama-quotes-api
 
 This repository is the front end create-react-app file for the react-portfolio
